@@ -122,7 +122,7 @@ class SudokuSolver {
       if (row === 2 || row === 5 || row === 8) {
         idxRow = 3;
       } else if (row === 3 || row === 6 || row === 9) {
-        idxRow === 6;
+        idxRow = 6;
       }
 
       if (col === 2 || col === 5 || col === 8) {
