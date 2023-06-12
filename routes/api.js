@@ -17,7 +17,7 @@ module.exports = function (app) {
     } else if (!/^[a-i][1-9]$/i.test(coordinate)) {
       res.json({ error: "Invalid coordinate" });
     } else if (!/^[1-9]$/.test(value)) {
-      res.json({ error: " Invalid value" });
+      res.json({ error: "Invalid value" });
     } else {
       let arrCoord = coordinate.split("");
       let valRow = arrCoord[0].toLowerCase().charCodeAt() - 96;
