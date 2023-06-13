@@ -10,9 +10,9 @@ module.exports = function (app) {
 
     if (!puzzle || !coordinate || !value) {
       res.json({ error: "Required field(s) missing" });
-    } else if (!/^([1-9]|\.)+$/.test(puzzle)) {
+    } else if (!solver.validate1to9orPoint(puzzle)) {
       res.json({ error: "Invalid characters in puzzle" });
-    } else if (!/^.{81}$/.test(puzzle)) {
+    } else if (!solver.validate81lengthChar(puzzle)) {
       res.json({ error: "Expected puzzle to be 81 characters long" });
     } else if (!/^[a-i][1-9]$/i.test(coordinate)) {
       res.json({ error: "Invalid coordinate" });
@@ -58,9 +58,9 @@ module.exports = function (app) {
     let puzzle = req.body.puzzle;
     if (!puzzle) {
       res.json({ error: "Required field missing" });
-    } else if (!/^.{81}$/.test(puzzle)) {
+    } else if (!solver.validate81lengthChar(puzzle)) {
       res.json({ error: "Expected puzzle to be 81 characters long" });
-    } else if (!/^([1-9]|\.)+$/.test(puzzle)) {
+    } else if (!solver.validate1to9orPoint(puzzle)) {
       res.json({ error: "Invalid characters in puzzle" });
     } else {
       if (!solver.validate(puzzle)) {

@@ -70,6 +70,14 @@ class SudokuSolver {
     return true; // All checks passed, Sudoku string is valid
   }
 
+  validate81lengthChar(puzzle) {
+    return /^.{81}$/.test(puzzle);
+  }
+
+  validate1to9orPoint(puzzle) {
+    return /^([1-9]|\.)+$/.test(puzzle);
+  }
+
   checkRowPlacement(puzzleString, row, column, value) {
     let strSudoku = puzzleString;
     let arrRow = [];
