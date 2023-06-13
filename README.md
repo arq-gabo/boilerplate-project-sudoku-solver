@@ -2,7 +2,7 @@
 
 This is the boilerplate for the Sudoku Solver project. Instructions to complete your project can be found at https://www.freecodecamp.org/learn/quality-assurance/quality-assurance-projects/sudoku-solver
 
-![Sudoku]()
+![Sudoku](https://github.com/arq-gabo/boilerplate-project-sudoku-solver/blob/main/boilerplate-project-sudoku.jpg?raw=true)
 
 &nbsp;
 
